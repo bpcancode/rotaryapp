@@ -4,11 +4,42 @@
              x:Class="MauiApp1.View.EventDetailPage"
              Title="EventDetailPage">
     <Grid RowDefinitions="Auto, Auto, *" Padding="10" >
-        <Border StrokeShape="RoundRectangle 10" StrokeThickness="0" BackgroundColor="Yellow" Padding="10,20">
-            <Grid ColumnDefinitions="Auto, Auto" >
-                <Image Source="Location.png" />
-                <Image Grid.Column="1" Source="Calender.png" />
+        <Border StrokeShape="RoundRectangle 10" StrokeThickness="0" BackgroundColor="Yellow" Padding="10,20" Margin="0,40">
+            <Grid ColumnDefinitions="Auto, *, Auto" >
+                <Image Source="location.png" HeightRequest="35" WidthRequest="35"/>
+                <Image Grid.Column="2" Source="calendar.png" HeightRequest="35" WidthRequest="35"/>
             </Grid>
         </Border>
+
+        <Label Text="Upcoming events" FontAttributes="Bold" FontSize="18" Grid.Row="1" VerticalOptions="End"/>
+        <Button Text=">" HeightRequest="30" WidthRequest="30" Padding="0" Grid.Row="1" HorizontalOptions="End" CornerRadius="15" VerticalOptions="Center"/>
+
+        <VerticalStackLayout Grid.Row="2" Margin="0,10">
+            <Frame Padding="0" CornerRadius="5" HeightRequest="70" Margin="0,5" BorderColor="Transparent">
+                <Grid HorizontalOptions="Fill" VerticalOptions="Fill" RowDefinitions="*,*" ColumnDefinitions="100,*">
+                    <Label Text="Nov-06-2023" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" VerticalOptions="FillAndExpand" Grid.RowSpan="2" BackgroundColor="MediumPurple" FontAttributes="Bold"    TextColor="Goldenrod"/>
+                    <Label Margin="5,0" Text="Kathmandu" HorizontalOptions="Start" Grid.Column="1" VerticalOptions="Center" FontAttributes="Bold" TextColor="Red"/>
+                    <Label Margin="5,0" Text="The Rotary Foundation Seminar" HorizontalOptions="Start" Grid.Column="1" Grid.Row="1" VerticalOptions="Center" />
+                </Grid>
+            </Frame>
+
+            <Frame Padding="0" CornerRadius="5" HeightRequest="70" Margin="0,5" BorderColor="Transparent">
+                <Grid HorizontalOptions="Fill" VerticalOptions="Fill" RowDefinitions="*,*" ColumnDefinitions="100,*">
+                    <Label Text="Nov-06-2023" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" VerticalOptions="FillAndExpand" Grid.RowSpan="2" BackgroundColor="MediumPurple" FontAttributes="Bold"    TextColor="Goldenrod"/>
+                    <Label Margin="5,0" Text="Kathmandu" HorizontalOptions="Start" Grid.Column="1" VerticalOptions="Center" FontAttributes="Bold" TextColor="Red"/>
+                    <Label Margin="5,0" Text="The Rotary Foundation Seminar" HorizontalOptions="Start" Grid.Column="1" Grid.Row="1" VerticalOptions="Center" />
+                </Grid>
+            </Frame>
+
+            <Frame Padding="0" CornerRadius="5" HeightRequest="70" Margin="0,5" BorderColor="Transparent">
+                <Grid HorizontalOptions="Fill" VerticalOptions="Fill" RowDefinitions="*,*" ColumnDefinitions="100,*">
+                    <Label Text="Nov-06-2023" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" VerticalOptions="FillAndExpand" Grid.RowSpan="2" BackgroundColor="MediumPurple" FontAttributes="Bold"    TextColor="Goldenrod"/>
+                    <Label Margin="5,0" Text="Kathmandu" HorizontalOptions="Start" Grid.Column="1" VerticalOptions="Center" FontAttributes="Bold" TextColor="Red"/>
+                    <Label Margin="5,0" Text="The Rotary Foundation Seminar" HorizontalOptions="Start" Grid.Column="1" Grid.Row="1" VerticalOptions="Center" />
+                </Grid>
+            </Frame>
+
+        </VerticalStackLayout>
+
     </Grid>
 </ContentPage>

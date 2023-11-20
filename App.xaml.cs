@@ -14,6 +14,7 @@ namespace MauiApp1
             Routing.RegisterRoute(nameof(EventPage), typeof(EventPage));
             Routing.RegisterRoute(nameof(NewsPage), typeof(NewsPage));
             Routing.RegisterRoute(nameof(EventDetailPage), typeof(EventDetailPage));
+            Routing.RegisterRoute(nameof(NewsDetailPage), typeof(NewsDetailPage));
         }
     }
 }

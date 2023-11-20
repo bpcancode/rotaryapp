@@ -52,6 +52,12 @@ public partial class MainPageViewModel : ObservableObject
         await Shell.Current.GoToAsync(nameof(EventDetailPage));
     }
 
+    [RelayCommand]
+    async Task GotoNewsDetail()
+    {
+        await Shell.Current.GoToAsync(nameof(NewsDetailPage));
+    }
+
     [ObservableProperty]
     string notice;
 

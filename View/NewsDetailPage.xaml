@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.View.NewsDetailPage"
+             Title="NewsDetailPage">
+    <ScrollView>
+        
+        <Grid RowDefinitions="Auto, Auto, Auto, Auto">
+            <Grid  Background="Yellow" Padding="20" ColumnDefinitions="Auto, *">
+                <Border StrokeThickness="0" StrokeShape="RoundRectangle 5" BackgroundColor="{StaticResource Primary}" Padding="10,3" >
+                    <Label HeightRequest="30" VerticalTextAlignment="Center"
+                           TextColor="White" Text="Jajarkot And Rukkum EarthQuake"
+                           FontAttributes="Bold"
+                           FontSize="15" />
+                </Border>
+            </Grid>
+
+            <WebView Grid.Row="1">
+                <WebView.Source>
+                    <HtmlWebViewSource>
+                        <HtmlWebViewSource.Html>
+                            <![CDATA[
+                <HTML>
+                <BODY>
+                <H4>Message from District Regarding Jajarkot and Rukum</H4>
+                <P>Nov 4, 2023</P>
+                            <P>Dear Fellow Rotarians</p>
+                            <P>sit amet. Fames ac turpis egestas maecenas pharetra convallis posuere. Imperdiet massa
+                            tincidunt nunc pulvinar. Tempor commodo ullamcorper a lacus. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi.
+                            <BR>
+                            <BR>
+                            Dictumst quisque sagittis purus sit amet volutpat consequat mauris.
+                            <BR> Aliquam malesuada bibendum arcu vitae. Tortor condimentum lacinia quis vel eros donec ac odio tempor.
+                            <BR>
+                            <BR>
+Elit sed vulputate mi sit amet mauris commodo quis. Pulvinar pellentesque habitant morbi tristique senectus et netus et. Nisl rhoncus mattis rhoncus urna. Sed risus pretium quam vulputate dignissim suspendisse in. Tellus id interdum velit laoreet. Fringilla u<P/>
+                </BODY>
+                </HTML>
+                ]]>
+                        </HtmlWebViewSource.Html>
+                    </HtmlWebViewSource>
+                </WebView.Source>
+            </WebView>
+
+            <Label Grid.Row="2" Text="More News" FontAttributes="Bold" FontSize="13" Margin="10,5"/>
+
+            <Grid Grid.Row="3" ColumnDefinitions="Auto,Auto" >
+                <Frame Padding="5" CornerRadius="5" WidthRequest="180" Margin="3,8" BackgroundColor="White" BorderColor="Transparent">
+                    <Grid HorizontalOptions="Fill" VerticalOptions="Fill" RowDefinitions="auto,auto,auto" Padding="3,0">
+                        <Image Source="dotnet_bot" HeightRequest="140" WidthRequest="180" Aspect="AspectFill" />
+                        <Label Text="Message from District Governor Regarding Jajarkot" LineBreakMode="WordWrap" Grid.Row="1" HeightRequest="40" Margin="0,5,0,0"/>
+                        <HorizontalStackLayout Grid.Row="2" Spacing="5" Margin="0,8">
+                            <Border Padding="5" BackgroundColor="Red" StrokeThickness="0" StrokeShape="RoundRectangle 5">
+                                <Label Text="RI DIRECTOR" FontSize="12" TextColor="White" FontAttributes="Bold"/>
+                            </Border>
+                            <Label Text="Jul 1, 2023" FontSize="12" FontAttributes="Bold" VerticalOptions="End"/>
+                        </HorizontalStackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Padding="5" CornerRadius="5" WidthRequest="180" Margin="3,8" BackgroundColor="White" BorderColor="Transparent" Grid.Column="1">
+                    <Grid HorizontalOptions="Fill" VerticalOptions="Fill" RowDefinitions="auto,auto,auto" Padding="3,0">
+                        <Image Source="dotnet_bot" HeightRequest="140" WidthRequest="180" Aspect="AspectFill" />
+                        <Label Text="Message from District Governor Regarding Jajarkot" LineBreakMode="WordWrap" Grid.Row="1" HeightRequest="40" Margin="0,5,0,0"/>
+                        <HorizontalStackLayout Grid.Row="2" Spacing="5" Margin="0,8">
+                            <Border Padding="5" BackgroundColor="Red" StrokeThickness="0" StrokeShape="RoundRectangle 5">
+                                <Label Text="RI DIRECTOR" FontSize="12" TextColor="White" FontAttributes="Bold"/>
+                            </Border>
+                            <Label Text="Jul 1, 2023" FontSize="12" FontAttributes="Bold" VerticalOptions="End"/>
+                        </HorizontalStackLayout>
+                    </Grid>
+                </Frame>
+            </Grid>
+            
+        </Grid>
+    </ScrollView>
+</ContentPage>
