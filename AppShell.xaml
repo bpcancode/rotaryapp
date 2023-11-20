@@ -12,16 +12,20 @@
     <TabBar>
         <ShellContent
             Title="Home"
+            Icon="home.png"
             ContentTemplate="{DataTemplate local:MainPage}"
             Route="MainPage" />
         <ShellContent
+            Icon="club.png"
             Title="Club"
             ContentTemplate="{DataTemplate view:ClubPage}"/>
         <ShellContent
-            Title="District Governors"
+            Icon="link.png"
+            Title="Governors"
             ContentTemplate="{DataTemplate view:DistrictGovernorsPage}"/>
         <ShellContent
-            Title="District Committee"
+            Icon="meeting.png"
+            Title="Committee"
             ContentTemplate="{DataTemplate view:DistrictCommitteePage}"/>
     </TabBar>
     

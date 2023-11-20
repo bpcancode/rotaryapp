@@ -4,6 +4,7 @@
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              xmlns:vm="clr-namespace:MauiApp1"
              x:Class="MauiApp1.MainPage"
+             BackgroundColor="#f5f9fa"
              Title="Home">
 
     <ContentPage.BindingContext>
@@ -18,7 +19,7 @@
 
     <ScrollView>
         <VerticalStackLayout>
-            <CarouselView HeightRequest="300" IsDragging="True" IsScrollAnimated="False">
+            <CarouselView HeightRequest="300" IsScrollAnimated="False">
                 <CarouselView.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>2080 Batch Welcome Program</x:String>
@@ -36,7 +37,7 @@
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
             </CarouselView>
-            <Grid Margin="20,10" BackgroundColor="WhiteSmoke" Padding="5,3">
+            <Grid Margin="20,10" Padding="5,3" BackgroundColor="White">
                 <Button Text="^" Padding="0" VerticalOptions="Start" HorizontalOptions="End" IsVisible="{Binding Expended}" Margin="0,-16"
                             BackgroundColor="PaleVioletRed" CornerRadius="15" HeightRequest="30" WidthRequest="30" Command="{Binding toggleExpenderCommand}" />
                     <Label Text="{Binding Notice}" />
@@ -47,7 +48,7 @@
 
             <Grid Grid.Row="1" RowDefinitions="Auto,Auto" Margin="20,10">
                 <Grid ColumnDefinitions="*, Auto" >
-                    <Label Text="Upcomming events" />
+                    <Label Text="Upcomming events" FontAttributes="Bold" />
                     <Button Grid.Column="1" HorizontalOptions="End" Margin="5,0" HeightRequest="30" WidthRequest="30" CornerRadius="15" Padding="0" Text=">" Command="{Binding GotoEventPageCommand}"/>
                 </Grid>
                 <CollectionView Margin="0,10" ItemsSource="{Binding Data}" Grid.Row="1">
@@ -57,7 +58,7 @@
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:MainPageViewModel}}, Path=GotoEventDetailCommand}" />
                                 </Frame.GestureRecognizers>
-                                <Grid HorizontalOptions="Fill" VerticalOptions="Fill" RowDefinitions="*,*" ColumnDefinitions="100,*">
+                                <Grid HorizontalOptions="Fill" VerticalOptions="Fill" RowDefinitions="*,*" ColumnDefinitions="100,*" >
                                     <Label Text="Nov-06-2023" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" VerticalOptions="FillAndExpand" Grid.RowSpan="2" BackgroundColor="MediumPurple" FontAttributes="Bold"    TextColor="Goldenrod"/>
                                     <Label Margin="5,0" Text="Kathmandu" HorizontalOptions="Start" Grid.Column="1" VerticalOptions="Center" FontAttributes="Bold" TextColor="Red"/>
                                     <Label Margin="5,0" Text="The Rotary Foundation Seminar" HorizontalOptions="Start" Grid.Column="1" Grid.Row="1" VerticalOptions="Center" />
@@ -69,7 +70,7 @@
             </Grid>
             <Grid Grid.Row="1" RowDefinitions="Auto,Auto" Margin="20,10,20,20">
                 <Grid ColumnDefinitions="*, Auto" >
-                    <Label Text="Resent news" />
+                    <Label Text="Recent news" FontAttributes="Bold"/>
                     <Button Grid.Column="1" HorizontalOptions="End" Margin="5,0" HeightRequest="30" WidthRequest="30" CornerRadius="15" Padding="0" Text=">" Command="{Binding GotoNewsPageCommand}"/>
                 </Grid>
                 <CollectionView Margin="0,10" ItemsSource="{Binding Data}" Grid.Row="1" ItemsLayout="HorizontalList">
