@@ -48,8 +48,12 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\calendar.png" />
+	  <None Remove="Resources\Images\club.png" />
 	  <None Remove="Resources\Images\dotnet_bot.webp" />
+	  <None Remove="Resources\Images\home.png" />
+	  <None Remove="Resources\Images\link.png" />
 	  <None Remove="Resources\Images\location.png" />
+	  <None Remove="Resources\Images\meeting.png" />
 	</ItemGroup>
 
 	<ItemGroup>
