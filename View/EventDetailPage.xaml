@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.View.EventDetailPage"
+             Title="EventDetailPage">
+    <Grid RowDefinitions="Auto, Auto, *" Padding="10" >
+        <Border StrokeShape="RoundRectangle 10" StrokeThickness="0" BackgroundColor="Yellow" Padding="10,20">
+            <Grid ColumnDefinitions="Auto, Auto" >
+                <Image Source="Location.png" />
+                <Image Grid.Column="1" Source="Calender.png" />
+            </Grid>
+        </Border>
+    </Grid>
+</ContentPage>

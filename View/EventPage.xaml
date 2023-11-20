@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:MauiApp1.ViewModel"
+             x:Class="MauiApp1.View.EventPage"
+             Title="EventPage">
+
+    <ContentPage.BindingContext>
+        <vm:ClubViewModel />
+    </ContentPage.BindingContext>
+    <CollectionView Margin="10" ItemsSource="{Binding Names}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Frame Padding="0" CornerRadius="5" HeightRequest="70" Margin="0,5" BorderColor="Transparent">
+                    <Grid HorizontalOptions="Fill" VerticalOptions="Fill" RowDefinitions="*,*" ColumnDefinitions="100,*">
+                        <Label Text="Nov-06-2023" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" VerticalOptions="FillAndExpand" Grid.RowSpan="2" BackgroundColor="MediumPurple" FontAttributes="Bold"    TextColor="Goldenrod"/>
+                        <Label Margin="5,0" Text="Kathmandu" HorizontalOptions="Start" Grid.Column="1" VerticalOptions="Center" FontAttributes="Bold" TextColor="Red"/>
+                        <Label Margin="5,0" Text="The Rotary Foundation Seminar" HorizontalOptions="Start" Grid.Column="1" Grid.Row="1" VerticalOptions="Center" />
+                    </Grid>
+                </Frame>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>

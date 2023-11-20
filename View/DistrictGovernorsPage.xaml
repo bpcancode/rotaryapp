@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:MauiApp1.ViewModel"
+             x:Class="MauiApp1.View.DistrictGovernorsPage"
+             Title="District Governors"
+             BackgroundColor="#f5f9fa">
+
+    <ContentPage.BindingContext>
+        <vm:ClubViewModel />
+    </ContentPage.BindingContext>
+    <Grid RowDefinitions="Auto, *">
+        <Grid ColumnDefinitions="100, *" Padding="20,15" BackgroundColor="Yellow" ColumnSpacing="10" Margin="0">
+            <Border Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" Stroke="White" BackgroundColor="Yellow" HeightRequest="100" WidthRequest="100" StrokeThickness="3" StrokeShape="RoundRectangle 50">
+                <Image Source="dotnet_bot" Aspect="AspectFill" />
+            </Border>
+            <VerticalStackLayout Grid.Column="1" VerticalOptions="Fill" Spacing="5">
+                <Label Text="Rajendra Prasad Dhoju" FontAttributes="Bold" />
+                <Label Text="District Governot- (2023-2024)" FontSize="12"/>
+                <Label Text="Rotary Club of Butuwal" FontSize="12"/>
+                <Label Text="Dhoju99@gmail.com" TextColor="Blue" FontSize="12" FontAttributes="Bold" VerticalOptions="End"/>
+            </VerticalStackLayout>
+        </Grid>
+
+        <CollectionView Margin="0,0" ItemsSource="{Binding Names}" Grid.Row="1" ItemsLayout="VerticalGrid, 2" >
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="5, 10, 5, 30" CornerRadius="8" WidthRequest="180" Margin="10" BackgroundColor="White" BorderColor="Transparent">
+                        <VerticalStackLayout HorizontalOptions="Fill" VerticalOptions="Fill" Padding="3,0">
+                            <Border StrokeThickness=".2" HeightRequest="70" WidthRequest="70" StrokeShape="RoundRectangle 40" HorizontalOptions="Center" >
+                                <Image Source="dotnet_bot" HeightRequest="160" WidthRequest="180" Aspect="AspectFit" />
+                            </Border>
+                            <Label Text="PDG Late Dr. Tikaman Vaidya" HorizontalOptions="Center" LineBreakMode="TailTruncation" FontSize="12" FontAttributes="Bold" CharacterSpacing="-.5" Grid.Row="1"/>
+                            <Label Text="District Governer" HorizontalOptions="Center" LineBreakMode="TailTruncation" FontSize="12"  CharacterSpacing="-.5" Grid.Row="1"/>
+                            <Label Text="Rotary Club of Patan West" HorizontalOptions="Center" LineBreakMode="TailTruncation" FontSize="12" CharacterSpacing="-.5" Grid.Row="1"/>
+
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>
